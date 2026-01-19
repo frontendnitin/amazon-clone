@@ -6,6 +6,8 @@ import FeatureSection from "./FeatureSection/featureSection";
 import VideoScrollSection from "./VideoScrollSection/videoScrollSection";
 import HorizontalProductScroll from "../../Component/HorizontalProductScroll/HorizontalProductScroll";
 import data from "../../Component/HorizontalProductScroll/horizontalScrollData";
+import HomeGridProductSection from "../../Component/HomeGridProductSection/HomeGridProductSection";
+import homeGridProductData from "../../Component/HomeGridProductSection/HomeGridProductData";
 const HomeScreen = () => {
   return (
     <div className="HomeScreen">
@@ -27,6 +29,13 @@ const HomeScreen = () => {
         title={data.firstDeals.title}
         products={data.firstDeals.products}
         seeMoreText={data.firstDeals.seeMoreText}
+      />
+      <HomeGridProductSection cards={homeGridProductData} />
+      <HorizontalProductScroll
+        title={data.bikesDeals.title}
+        products={data.bikesDeals.products}
+        seeMoreText={data.bikesDeals.seeMoreText}
+        variant="bike"
       />
     </div>
   );

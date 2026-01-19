@@ -1,0 +1,125 @@
+* {
+  font-family: "Amazon Ember", Arial, sans-serif;
+}
+.homeGridRow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.homeGridCard {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  /* box-sizing: border-box; */
+  padding: 20px 0 15px;
+  height: 450px;
+}
+
+.homeGridTitle {
+  padding: 0px 20px;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.2;
+  /* min-height: 35px;   */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+  color: #0f1111;
+}
+
+.homeGridItems {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0px 12px;
+  flex-grow: 1;
+  /* align-items: center; */
+  align-items: stretch;
+}
+
+.homeGridItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 6px 0px;
+  gap: 4px;
+}
+
+.imgWrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.homeGridItem:hover {
+  cursor: pointer;
+}
+
+.homeGridItem img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+}
+
+.homeGridItem.noText img {
+  height: 150px;
+}
+
+.homeGridItem.withText img {
+  height: 110px;
+}
+
+.itemName {
+  font-size: 13px;
+  font-weight: 500;
+  color: #0f1111;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-align: left;
+  padding: 0px 3px;
+  text-overflow: ellipsis;
+}
+
+.price {
+  display: inline-flex;
+  align-items: flex-start;
+  font-weight: 500;
+  color: #0f1111;
+}
+
+.currency {
+  font-size: 12px;
+
+  margin-right: 2px;
+}
+
+.amount {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.fraction {
+  font-size: 12px;
+
+  margin-left: 1px;
+}
+
+.seemore-text {
+  margin-top: auto;
+  font-size: 14px;
+  padding: 20px 20px 0px 20px;
+  color: #007185;
+  cursor: pointer;
+}

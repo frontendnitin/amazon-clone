@@ -16,7 +16,7 @@
 }
 
 .section-heading .section-title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
 }
 
@@ -30,6 +30,7 @@
 .section-heading .see-more:hover {
   color: #c45500; /* Slight hover effect */
   cursor: pointer;
+  text-decoration: underline;
 }
 
 /* Horizontal scroll container */
@@ -78,4 +79,20 @@
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+}
+
+.bike .product-scroll {
+  gap: 6px;
+}
+
+/* Only bike section */
+.bike .product-card {
+  height: 170px;
+  width: 265px;
+  margin-right: 1px;
+}
+
+.bike .product-card img {
+  max-height: 100%;
+  max-width: 100%;
 }
