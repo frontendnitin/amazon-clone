@@ -1,0 +1,147 @@
+.sponsoredSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  position: relative;
+  margin: 20px 20px;
+  /* padding: 20px; */
+  box-sizing: border-box;
+}
+
+.sponsoredCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  gap: 100px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  position: relative;
+  width: 950px
+  /* max-width: 800px; */
+}
+
+.sponsoredImg{
+  flex: 0 0 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsoredImg img {
+  width: 280px;
+  height: auto;
+  max-height: 260px;
+  object-fit: contain;
+}
+
+.sponsoredDetails{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex:1
+}
+
+.sponsoredTitle{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+  color: #2162a1;
+  cursor: pointer;
+}
+
+.sponsoredTitle:hover{
+  text-decoration: underline;
+}
+
+/* Prices */
+.newPrice {
+  font-size: 22px;
+  font-weight: 600;
+  color: #0f1111;
+}
+
+.oldPrice {
+  font-size: 14px;
+  color: #565959;
+  text-decoration: line-through;
+}
+
+/* Prime Badge */
+.primeBadge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #007185;
+  font-size: 14px;
+}
+
+.primeIcon {
+  color: #00a8e1;
+  font-size: 16px;
+}
+
+.primeText {
+  font-weight: 600;
+}
+
+.shopBtn{
+  margin-top: 10px;
+  width: fit-content;
+  padding: 8px 16px;
+  background-color: #ffd814;
+  border: 1px solid #fcd200;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.priceRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Prices */
+.newPrice {
+  font-size: 22px;
+  font-weight: 500;
+  color: #0f1111;
+}
+
+.oldPrice {
+  font-size: 14px;
+  color: #565959;
+  text-decoration: line-through;
+}
+
+/* Prime Badge */
+.primeBadge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #007185;
+  font-size: 14px;
+}
+
+.primeIcon {
+  color: #00a8e1;
+  font-size: 16px;
+}
+
+.primeText {
+  font-weight: 600;
+}
+
+.sponsoredText {
+  position: absolute;
+  right: calc((100% - 970px) / 2 + 10px); /* aligns with card */
+  bottom: -15px;  /* moves it outside the box */
+  font-size: 12px;
+  color: #565959;
+}
