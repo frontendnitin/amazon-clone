@@ -2,6 +2,8 @@ import React from "react";
 import sponsoredData from "./sponsoredProductData";
 import "./sponsoredSection.css";
 import { FaCheckCircle } from "react-icons/fa";
+import { MdInfo } from "react-icons/md";
+
 import RatingStars from "../../../Component/RatingStars/RatingStars";
 const SponsoredSection = () => {
   const { product } = sponsoredData;
@@ -37,7 +39,7 @@ const SponsoredSection = () => {
             <button className="shopBtn">Shop now</button>
           </div>
         </div>
-        <div className="sponsoredText">Sponsored i</div>
+        <div className="sponsoredText">Sponsored <MdInfo className="i-logo"/></div>
       </div>
     </div>
   );

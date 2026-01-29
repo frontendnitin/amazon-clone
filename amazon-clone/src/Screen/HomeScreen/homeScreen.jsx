@@ -9,6 +9,7 @@ import data from "../../Component/HorizontalProductScroll/horizontalScrollData";
 import HomeGridProductSection from "../../Component/HomeGridProductSection/HomeGridProductSection";
 import homeGridProductData from "../../Component/HomeGridProductSection/HomeGridProductData";
 import SponsoredSection from "./SponsoredSection/sponsoredSection";
+
 const HomeScreen = () => {
   return (
     <div className="HomeScreen">
@@ -33,10 +34,10 @@ const HomeScreen = () => {
       />
       <SponsoredSection/>
       <HomeGridProductSection cards={homeGridProductData} />
-      <HorizontalProductScroll
+      <HorizontalProductScroll  
         title={data.bikesDeals.title}
         products={data.bikesDeals.products}
-        seeMoreText={data.bikesDeals.seeMoreText}
+        seeMoreText={data.bikesDeals.seeMoreText} 
         variant="bike"
       />
     </div>
