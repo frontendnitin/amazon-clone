@@ -1,7 +1,7 @@
 import React from "react";
 import "./footer.css";
 import amazonLogo from "../../assets/amazonLogo.png";
-
+import indiaFlag from "../../assets/india.png"
 const Footer = () => {
   const backToTopHandler = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -14,7 +14,7 @@ const Footer = () => {
         Back to top
       </div>
 
-      {/* Footer links section */}
+
       <div className="footer-links">
         <div className="footer-links-inner">
           <div className="footer-column">
@@ -50,13 +50,23 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Logo + country */}
+
       <div className="footer-brand">
         <img src={amazonLogo} alt="Amazon" className="footer-logo" />
-        <span className="footer-country">India</span>
+        <div className="footer-selectors">
+          {/* Language box */}
+          <div className="footer-box">
+            🌐 <span>English</span>
+          </div>
+
+          {/* Country box */}
+          <div className="footer-box">
+            <img src={indiaFlag} alt="India" className="footer-flag" />
+            <span>India</span>
+          </div>
+        </div>
       </div>
 
-      {/* Bottom legal */}
       <div className="footer-bottom">
         <p>
           Conditions of Use & Sale &nbsp; | &nbsp; Privacy Notice &nbsp; |
@@ -64,8 +74,10 @@ const Footer = () => {
         </p>
         <p>© 1996–2026, Amazon.com, Inc. or its affiliates</p>
       </div>
+
     </footer>
   );
 };
 
 export default Footer;
+
