@@ -1,0 +1,55 @@
+.HomeDetails {
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  /* background-color: rgb(238, 235, 235); */
+  box-sizing: border-box;
+}
+
+.HomeDetailsSection {
+  background-color: white; /* background for each section */
+  margin: 0px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.HomeDetailsHeading {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  gap: 20px;
+}
+
+.HomeDeatilsHeadingTitle {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.HomeDetailsHeadingSeemore {
+  font-weight: 200;
+  color: #007185;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #555;
+    transition: color 0.1s ease;
+  }
+}
+
+.HomeDetailsItemdiv {
+  padding: 20px;
+}
+
+.HomeDetailsItems {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px 0;
+  scroll-snap-type: x mandatory;
+  gap: 10px;
+}
+
+.HomeDetailsItemsimg {
+  height: 170px; /* Keep all images same height */
+  flex-shrink: 0; /* Prevent image from shrinking */
+}

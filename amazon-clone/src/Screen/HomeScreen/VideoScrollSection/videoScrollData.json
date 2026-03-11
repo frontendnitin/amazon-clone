@@ -1,0 +1,283 @@
+[
+  {
+    "title": "Amazon Live - Skincare essentials for every routine",
+    "seeMore": "See more from Amazon Live",
+    "videoSrc": "/videos/beautyvideo.mp4",
+    "poster": "https://m.media-amazon.com/images/I/81XjM9TxuBL._AC_SX679_.jpg",
+    "products": [
+      {
+        "src": "https://m.media-amazon.com/images/I/51bFrSYUuPL._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "Vitamin C Brightening Serum – reduces dark spots and boosts glow naturally.",
+        "discount": "82% off",
+        "deal": "Limited time deal",
+        "price": "₹599",
+        "oldprice": "₹899"
+      },
+
+      {
+        "src": "https://m.media-amazon.com/images/I/41Rm5Uj5nJL._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "Hydra Moist Daily Cream – lightweight, non-greasy and perfect for dry skin.",
+        "price": "₹349",
+        "oldprice": "₹499",
+        "discount": "30% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/41QoBBooGUL._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "Gentle Aloe Vera Face Wash – cleanses impurities and keeps your skin soft.",
+        "price": "₹279",
+        "oldprice": "₹399",
+        "discount": "30% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/61mIHh89IFL._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "Rose Water Toner – tones and tightens pores for fresh, hydrated skin.",
+        "price": "₹199",
+        "oldprice": "₹299",
+        "discount": "33% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/51JigwjzGsL._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "Herbal Charcoal Face Mask – removes blackheads and detoxifies the skin.",
+        "price": "₹329",
+        "oldprice": "₹499",
+        "discount": "34% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/61vmEu4MuZL._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "Sunscreen SPF 50 – protects from harmful UV rays while keeping skin smooth.",
+        "price": "₹449",
+        "oldprice": "₹599",
+        "discount": "25% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/612gxDPcCGL._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "Coconut Nourishing Night Cream – repairs skin overnight for a radiant look.",
+        "price": "₹499",
+        "oldprice": "₹749",
+        "discount": "33% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/4185Hy7A8kL._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "Neem Purifying Face Wash – prevents acne and refreshes oily skin instantly.",
+        "price": "₹259",
+        "oldprice": "₹349",
+        "discount": "25% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/51MMIsNs8vL._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "Hydrating Face Mist – keeps skin hydrated and glowing throughout the day.",
+        "price": "₹299",
+        "oldprice": "₹449",
+        "discount": "33% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/41vY+-RxxPL._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "Coffee Face Scrub – exfoliates dead skin cells for smooth, brighter skin.",
+        "price": "₹379",
+        "oldprice": "₹499",
+        "discount": "24% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/51rNsMLz71L._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "Anti-aging Retinol Serum – firms skin and reduces fine lines effectively.",
+        "price": "₹699",
+        "oldprice": "₹999",
+        "discount": "30% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/71yl5mKbEnL._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "Clay Detox Mask – deeply cleanses pores and leaves a refreshing matte finish.",
+        "price": "₹359",
+        "oldprice": "₹499",
+        "discount": "28% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/71iJKKDDToL._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "Vitamin E Moisturizing Lotion – keeps skin soft and nourished all day long.",
+        "price": "₹299",
+        "oldprice": "₹399",
+        "discount": "25% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/51bzTH4xLpL._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "Green Tea Face Gel – hydrates, tones, and refreshes tired skin instantly.",
+        "price": "₹259",
+        "oldprice": "₹349",
+        "discount": "26% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/41-Ty-g-rPL._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "Papaya Face Pack – natural formula for removing tan and improving glow.",
+        "price": "₹199",
+        "oldprice": "₹299",
+        "discount": "33% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/81BGabCpS2L._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "Aloe Vera Gel – soothes skin after sun exposure and prevents dryness.",
+        "price": "₹189",
+        "oldprice": "₹299",
+        "discount": "37% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/514PVblwPdL._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "Lemon Face Wash – gently brightens dull skin and removes excess oil.",
+        "price": "₹249",
+        "oldprice": "₹349",
+        "discount": "29% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/61wuf2UyXuL._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "Herbal Anti-Acne Gel – clears acne and helps prevent future breakouts.",
+        "price": "₹329",
+        "oldprice": "₹499",
+        "discount": "34% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/61tMQf5caZL._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "Cucumber Cooling Face Mask – refreshes and hydrates tired skin quickly.",
+        "price": "₹279",
+        "oldprice": "399",
+        "discount": "30% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/51e98CyCHgL._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "Charcoal Peel-off Mask – removes dirt and blackheads effectively.",
+        "price": "₹349",
+        "oldprice": "₹499",
+        "discount": "30% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/41wXDfDt+yL._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "Vitamin C Day Cream – boosts brightness and shields from UV damage.",
+        "price": "₹499",
+        "oldprice": "₹699",
+        "discount": "29% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/519zemKb6NL._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "Tea Tree Oil Serum – clears acne marks and improves skin texture.",
+        "price": "₹449",
+        "oldprice": "₹599",
+        "discount": "25% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/512zW8ZvBwL._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "Herbal Face Mist – refreshes dull skin and gives a cooling after-feel.",
+        "price": "₹259",
+        "oldprice": "₹349",
+        "discount": "26% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/71l0uG4BwJL._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "Natural Rose Clay Cleanser – balances oil and removes impurities deeply.",
+        "price": "₹389",
+        "oldprice": "₹499",
+        "discount": "22% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://images-eu.ssl-images-amazon.com/images/I/61rWBHZZNbL._AC_UL165_SR165,165_.jpg",
+        "name": "Olay 7in1 Ultra-light Gel Moisturizer | Niacinamide, Vitamin C, Collagen Peptides | 50 g",
+        "price": "₹549",
+        "oldprice": "₹699",
+        "discount": "21% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://images-eu.ssl-images-amazon.com/images/I/51oORLJ+2RL._AC_UL165_SR165,165_.jpg",
+        "name": "Conscious Chemist® Vitamin C Face Cream SPF30 | 100 g",
+        "price": "₹449",
+        "oldprice": "₹599",
+        "discount": "25% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/51eBBB5Qm0L._AC_SY200_.jpg",
+        "name": "NIVEA MEN Deep Impact Face Wash 100 g | With Black Carbon",
+        "price": "₹199",
+        "oldprice": "₹249",
+        "discount": "20% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/41AgZj-OglL._AC_SY200_.jpg",
+        "name": "NIVEA MEN Dark Spot Reduction Face Wash 100 g | Ginkgo & Ginseng",
+        "price": "₹179",
+        "oldprice": "₹229",
+        "discount": "22% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/41x2F6Vvp3L._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "Maybelline New York Matte Pencil Eyeliner – Black",
+        "price": "₹179",
+        "oldprice": "₹249",
+        "discount": "28% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/41AjM4r973L._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "Maybelline New York Instant Age Rewind Concealer – Caramel",
+        "price": "₹229",
+        "oldprice": "₹329",
+        "discount": "30% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/51vfD+FfquL._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "Colorbar Cosmetics Flawless Finish Primer 30 ml | Light Formula",
+        "price": "₹349",
+        "oldprice": "₹449",
+        "discount": "22%off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/41J+mcf+HML._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "Maybelline SuperStay Matte Ink Liquid Lipstick – Founder",
+        "price": "₹299",
+        "oldprice": "₹399",
+        "discount": "25%off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/61aGE1I0CjL._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "MARS All Oil Blotter Gel Compact – Matte Finish (5 gm)",
+        "price": "₹199",
+        "oldprice": "₹249",
+        "discount": "20% off",
+        "deal": "Limited time deal"
+      },
+      {
+        "src": "https://m.media-amazon.com/images/I/51M97ib3bPL._SX240_QL100_AC_SCLZZZZZZZ_.jpg",
+        "name": "SUGAR Cosmetics Double Matte Eyeliner Gel – 01 Black Swan",
+        "price": "₹159",
+        "oldprice": "₹229",
+        "discount": "30% off",
+        "deal": "Limited time deal"
+      }
+    ]
+  }
+]

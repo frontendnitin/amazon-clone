@@ -1,0 +1,239 @@
+.productPage {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.productTopBanner {
+  display: flex;
+  /* padding:15px 15px; */
+  height: 50px;
+  padding: 0 9px 0 15px;
+  gap: 25px;
+  box-shadow: inset 0px -0.5px 1px #747474;
+}
+
+.productTopBannerItems {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 22px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333333;
+}
+
+.productTopBannerItemsSubMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 13px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #333333;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: #2162a1;
+    text-decoration-thickness: 1.9px;
+    text-underline-offset: 3px;
+  }
+}
+
+.productsPageMain {
+  display: flex;
+  padding: 16px 10px;
+}
+
+.productsPageMainLeftCategory {
+  width: 14%;
+  border-right: 2px solid #ddd;
+  padding: 0 9px;
+}
+
+.productsPageMainCategoryTitle {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.productsPageMainLeftCategoryContent {
+  padding: 0 0 0 13px;
+  font-size: 14px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.productsPageMainLeftCategoryTitleContent {
+  font-weight: 700;
+}
+
+.productsPageMainLeftCategoryContentSub {
+  padding: 0 0 0 8px;
+}
+
+.ratingUp {
+  margin-left: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.filterSection {
+  margin-top: 20px;
+}
+
+.filterTitle {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.checkboxItem {
+  display: block;
+  font-size: 14px;
+  margin: 12px 0;
+  cursor: pointer;
+}
+
+.ratingSection {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ratingTitle {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.productsPageMainRight {
+  width: 86%;
+  padding: 0 0 0 12px;
+}
+
+.productsPageMainRightTopBanner {
+  width: 99%;
+  border: 1px solid #ccc;
+  padding: 14px 38px;
+  border-radius: 5px;
+  font-size: 14px;
+  margin: 20px 0;
+  box-sizing: border-box;
+}
+
+.productsPageMainRightTopBannerSpan {
+  color: #c45500;
+  font-weight: 700;
+}
+.itemsImageProductPage {
+  width: 100%;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
+ 
+}
+
+.itemsImageProductPageOne {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  border-radius: 5px;
+  box-sizing: border-box;
+  max-height: 640px;
+  padding: 10px;
+  /* height: 450px; */
+  height: auto;
+   background-color: rgb(247, 247, 247);
+   &:hover{
+    cursor: pointer;
+  }
+}
+
+
+.imgBlockitemsImageProductPageOne {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+
+.productImageProduct{
+  height: 200px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.imageproductName{
+  margin-top: 15px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 3 ;
+  -webkit-line-clamp: 3 ;
+  overflow: hidden;
+  text-align: left;
+  padding: 0px 4px;
+  text-overflow: ellipsis;
+  min-height: 70px;  
+}
+
+.productRating{
+  margin-top: 10px;
+}
+
+.productCartPrice{
+  margin-top: 7px;
+  display: flex;
+  align-items: center;
+}
+
+.productCartPrice .itemProductcurrency{
+  font-size: 12px;
+  position: relative;
+  top: -6px;
+  margin-right: 2px;
+}
+
+.productCartPrice .itemProductnewPrice{
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.productCartPrice .oldPrice{
+  /* margin-top: 3px; */
+  margin-left: 2px;
+}
+
+.productCartPrice .AddtoCartText{
+  margin-left: auto;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #FFA41C;
+  border: none;
+  border-radius: 5px;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.offProductPage{
+  /* margin-top: 2px; */
+  font-weight: 400;
+  font-size: 12px;
+  color: #727171;
+}
+
+.freeDeliveryProduct{
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 14px;
+}

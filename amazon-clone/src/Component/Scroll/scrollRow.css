@@ -1,0 +1,79 @@
+/* wrapper around the scroll area + arrows */
+.scrollWrapper {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+/* the horizontal scroll area (the actual row of images/cards) */
+.scrollRow {
+  display: flex;
+  /* flex-wrap: nowrap; */
+  gap: 12px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  align-items: flex-start;
+  /* padding: 12px 0; */
+}
+
+.scrollRow img {
+  flex-shrink: 0; /* prevents images from squeezing out */
+}
+
+/* hide native scrollbar */
+.scrollRow::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollRow {
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* base arrow style (hidden by default via opacity & pointer-events) */
+.arrowBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100px;
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0); /* start fully transparent */
+  backdrop-filter: blur(0px); /* Amazon style */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  border: none;
+  cursor: pointer;
+  z-index: 50;
+  opacity: 0;
+  pointer-events: none; /* ✔ FIXED */
+  transition: opacity 0.35s ease, background 0.35s ease,
+    backdrop-filter 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* visible on hover of whole wrapper */
+.scrollWrapper:hover .arrowBtn {
+  opacity: 1;
+  pointer-events: auto;
+  background: rgba(255, 255, 255, 0.98);
+  transform: translateY(-50%);
+}
+
+/* left and right positions */
+.leftArrow {
+  left: 0px;
+  border-radius: 0 5px 5px 0; /* vertical pill feel */
+}
+.rightArrow {
+  right: 0px;
+  border-radius: 8px 0 0 8px;
+}
+
+/* ensure arrows don't block pointer events on small devices: hide them */
+@media (max-width: 768px) {
+  .arrowBtn {
+    display: none;
+  }
+}

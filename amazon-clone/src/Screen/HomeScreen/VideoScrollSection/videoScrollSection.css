@@ -1,0 +1,146 @@
+.videoScrollMain {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 12px 1px 12px 12px;
+  margin: 0px 20px 20px 20px; /* <-- This bottom margin is the real fix */
+}
+
+.videoScrollSection {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.videoScrollHeading {
+  display: flex;
+  align-items: baseline;
+  column-gap: 15px;
+  padding: 0px 12px;
+}
+
+.videoScrollTitle {
+  font-size: 22px;
+  font-weight: 600;
+  color: #111;
+}
+
+.videoscollSeeMore {
+  font-size: 14px;
+  color: #007185;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.videoScrollTitle,
+.videoscollSeeMore {
+  line-height: 1;
+}
+
+.videoScrollContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+}
+
+.videoContainer {
+  flex: 0 0 34%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hoverVideo {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.productCard {
+  flex: 0 0 auto;
+  width: 160px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 5px 8px 35px 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.imgWrapper {
+  height: auto;
+  overflow: hidden;
+}
+
+.scrollImg {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.productdetails {
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  margin-top: 10px;
+  /* margin-bottom: 4px; */
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-align: left;
+  padding: 0px 4px;
+  text-overflow: ellipsis;
+}
+
+.offer {
+  display: flex;
+  gap: 5px;
+  padding: 5px 0px;
+  text-align: left;
+  padding: 0px 4px;
+}
+
+.discount {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap; /* prevents two-line wrapping */
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #cc0c39;
+  border-radius: 2px;
+  padding: 1px 6px; /* Amazon-like spacing */
+}
+
+.deal {
+  font-size: 12px;
+  font-weight: 600;
+  text-align: left;
+  color: #cc0c39;
+}
+
+.productPrice {
+  display: flex;
+  padding: 5px 4px;
+  gap: 3px;
+}
+
+.newPrice {
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+}
+
+.oldPrice {
+  font-size: 13px;
+  font-weight: 400;
+  color: #565959;
+  text-decoration: line-through;
+}

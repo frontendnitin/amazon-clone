@@ -1,0 +1,98 @@
+/* Container of the entire section */
+.horizontal-section {
+  margin: 20px;
+  padding: 0 10px;
+  background-color: #fff;
+}
+
+/* Section heading: title + see more */
+.section-heading {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 15px;
+  /* margin-bottom: 10px; */
+  padding: 10px 0px 5px 10px;
+}
+
+.section-heading .section-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.section-heading .see-more {
+  font-size: 0.9rem;
+  color: #007185; /* Amazon-like blue */
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.section-heading .see-more:hover {
+  color: #c45500; /* Slight hover effect */
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Horizontal scroll container */
+.product-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px; /* spacing between cards */
+  padding: 10px 10px 25px 10px; /* some padding below for scroll */
+  scroll-behavior: smooth;
+}
+
+/* Hide default scrollbar (optional) */
+.product-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.product-scroll::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 3px;
+}
+
+.product-scroll::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* Individual product card */
+.product-card {
+  flex: 0 0 auto;
+  width: 150px;
+  height: 200px;
+
+  /* 🔴 removed border & shadow */
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer; /* no hover feel */
+}
+
+/* Product image */
+.product-card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.bike .product-scroll {
+  gap: 6px;
+}
+
+/* Only bike section */
+.bike .product-card {
+  height: 170px;
+  width: 265px;
+  margin-right: 1px;
+}
+
+.bike .product-card img {
+  max-height: 100%;
+  max-width: 100%;
+}
