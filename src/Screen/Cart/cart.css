@@ -1,0 +1,225 @@
+.Cart {
+  background-color: #eaeded;
+  padding: 28px 18px 18px;
+  display: flex;
+  gap: 18px;
+}
+
+/* LEFT SECTION */
+
+.topLeftCart {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 79%;
+  padding: 20px 15px 15px;
+  box-sizing: border-box;
+}
+
+.cartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topLeftCartTitle {
+  font-size: 28px;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  line-height: 36px;
+  font-weight: 400;
+}
+
+.deselectItems {
+  font-size: 14px;
+  color: #007185;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.cartPriceTextDivider {
+  text-align: end;
+  font-size: 13px;
+  color: #565959;
+  font-weight: 500;
+}
+
+.cartItemsDiv {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* position: relative; */
+}
+
+.cartItemBlock {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  padding: 20px 0 20px 20px;
+  border-top: 1px solid #e7e7e7;
+  position: relative;
+}
+
+.cartItemLeftBlock {
+  display: flex;
+  width: 80%;
+  padding-left: 15px;
+}
+
+.productCheackbox .cartProductCheck {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cartItemLeftBlockImage {
+  width: 20%;
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+
+.cartItemLeftBlockImg {
+  width: 100%;
+}
+
+.cartItemLeftBlockDetails {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px 10px 20px;
+  gap: 1px;
+}
+
+.cartItemProductName {
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 18px;
+}
+
+.inStock {
+  font-size: 12px;
+  color: #007600;
+}
+
+.elgFreeShp {
+  font-weight: 500;
+  font-size: 14px;
+  color: #0f1111;
+}
+
+.deliveryDate {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.primeBadge {
+  gap: 0px;
+  margin-bottom: 1px;
+}
+
+.primeIcon {
+  font-weight: 800;
+  color: orangered;
+}
+
+.primeText {
+  font-weight: 800;
+  color: #1c9dfe;
+}
+
+.productGiftDetail {
+  margin-top: 2px;
+  display: flex;
+  gap: 3px;
+}
+
+.cartProductCheck {
+  height: 16px;
+  width: 16px;
+}
+
+.giftTextDetail {
+  padding-top: 3px;
+  font-size: 12px;
+  font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+.GiftText {
+  color: #0f1111;
+}
+
+.learnMoreText {
+  color: #2162a1;
+}
+
+.removeFromCart {
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #ffa41c;
+  width: fit-content;
+  padding: 8px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.cartItemRightBlock {
+  font-size: 17px;
+  font-weight: 600;
+  box-sizing: border-box;
+}
+
+.cartProductPrice {
+  display: inline-flex;
+  align-items: flex-start;
+  font-weight: 600;
+  color: #0f1111;
+}
+
+.topRightCart {
+  width: 21%;
+  background-color: #fff;
+  box-sizing: border-box;
+  height: fit-content;
+  padding: 20px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+.subTotalTitle {
+  font-size: 18px;
+  font-weight: 500;
+  /* padding: 10px; */
+}
+
+.subTotalTitleSpan {
+  font-weight: 700;
+}
+
+.giftAddto {
+  display: flex;
+  margin: 10px 0;
+  gap: 5px;
+}
+
+.giftText {
+  font-size: 14px;
+}
+
+.proceedToBuy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #ffce12;
+  cursor: pointer;
+}

@@ -1,0 +1,232 @@
+/* Main Navbar Container */
+.navbarBelt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #131921;
+  padding: 0 10px;
+  height: 60px;
+  width: 100%;
+  color: white;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Left Section */
+.leftNavBelt {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Amazon Logo */
+.leftNavBeltLogo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  gap : 0px;
+}
+.amazonLogoNavbar {
+  height: 30px;
+  width: auto;
+}
+.navbar_inLogo {
+  font-size: 14px;
+ padding-bottom:4px ;
+}
+
+/* Location */
+.navBeltLocation {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.navBeltLocation_icon {
+  margin-right: 2px;
+}
+.navBeltLocationPlace {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+.navBeltLocation_Top {
+  color: #ccc;
+  font-size: 11px;
+}
+.navBeltLocation_Bottom {
+  font-weight: bold;
+}
+
+/* Search Section */
+.navbarBeltSearchBox {
+  flex: 1; /* This allows it to take all available space */
+  display: flex;
+  justify-content: center;
+  padding: 0 10px;
+}
+.navbarBeltSearchDiv {
+  display: flex;
+  flex: 1;
+  max-width: 800px;
+  min-width: 300px;
+  height: 40px;
+  background-color: white;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.leftNavBelt,
+.rightNavBelt {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbarBeltDropdown {
+  display: flex;
+  align-items: center;
+  background-color: #e6e6e6;
+  border-right: 1px solid #5555;
+  padding: 0 8px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #555;
+}
+
+/* .navbarBeltDropdown .navbarBeltDropdownText {
+  font-size: ;
+} */
+
+.searchInput {
+  flex: 1;
+  padding: 0 10px;
+  height: 100%;
+  border: none;
+  font-size: 14px;
+}
+.searchInput:focus {
+  outline: none;
+}
+.searchIconNavbarBelt {
+  background-color: #febd69;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+/* Right Section */
+.rightNavBelt {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+}
+
+/* Language Selection */
+.countryLang {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.lang {
+  display: flex;
+  align-items: center;
+}
+.selectedLang {
+  font-size: 15px;
+  font-weight: 700;
+  margin-right: 2px;
+}
+
+/* User Account */
+.userAccount {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.signIn {
+  display: flex;
+  flex-direction: column;
+}
+.topSignin {
+  color: #ccc;
+  font-size: 13px;
+  font-weight: 700;
+}
+.bottomSignin {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* Orders */
+.navbarBeltOrder {
+  display: flex;
+  flex-direction: column;
+}
+.navbarBeltOrderTop {
+  font-size: 13px;
+  color: #ccc;
+}
+.navbarBeltOrderBottom {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* Cart */
+  .cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
+  }
+.cartNO {
+  position: absolute;
+  top: -2px;
+  left: 17px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #f08804;
+}
+.cartlogo {
+  display: flex;
+  align-items: center;
+  color: white;
+  gap:2px;
+  
+}
+.cartTitle {
+  /* margin-left: 5px; */
+  font-size: 14px;
+  font-weight: 700;
+ 
+}
+
+/* General hover effect for clickable nav items */
+.leftNavBeltLogo,
+.navBeltLocation,
+.countryLang,
+.userAccount,
+.navbarBeltOrder,
+.cart {
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  transition: border 0.2s ease;
+  cursor: pointer;
+}
+
+.leftNavBeltLogo:hover,
+.navBeltLocation:hover,
+.countryLang:hover,
+.userAccount:hover,
+.navbarBeltOrder:hover,
+.cart:hover {
+  border: 1px solid white;
+}
