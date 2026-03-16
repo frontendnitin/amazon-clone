@@ -2,8 +2,21 @@ import React from "react";
 import "./products.css";
 import productData from "./productsData";
 import RatingStars from "../../Component/RatingStars/RatingStars";
-
+import { addToCart } from "../../redux/actions/actions";
+import { useDispatch } from "react-redux";
+import { toast,ToastContainer } from "react-toastify/unstyled";
+import 'react-toastify/dist/ReactToastify.css'
 const Products = () => {
+  const dispatch = useDispatch();
+  
+  const handleAddToCart =(item)=>{
+    console.log(item)
+    toast.success ("Added in Cart",{
+      position:"bottom-right"
+    })
+    dispatch(addToCart(item))
+  }
+
   return (
     <div className="productPage">
       <div className="productTopBanner">
@@ -145,7 +158,7 @@ const Products = () => {
                   <span className="itemProductcurrency">₹</span>
                   <span className="itemProductnewPrice">{item.newprice}</span>
                   <span className="oldPrice">M.R.P: ₹{item.oldprice}</span>
-                  <button className="AddtoCartText" >Add to Cart</button>
+                  <button className="AddtoCartText" onClick={()=>{handleAddToCart(item)}}>Add to Cart</button>
                 </div>
                 <div className="offProductPage">Upto 10% off on select cards</div>
                 <div className="freeDeliveryProduct">Free Delivery on select cards</div>
@@ -155,6 +168,7 @@ const Products = () => {
           </div>
         </div>
       </div>
+      <ToastContainer/>
     </div>
   );
 };

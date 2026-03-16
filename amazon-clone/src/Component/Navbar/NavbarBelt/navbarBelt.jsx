@@ -6,8 +6,14 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Link } from "react-router-dom";
+import { useSelector,useDispatch } from "react-redux";
+
 
 const NavbarBelt = () => {
+
+  const cartItems = useSelector((state)=>state.cart.items)
+  
+
   return (
     <div className="navbarBelt">
       <div className="leftNavBelt">
@@ -81,7 +87,7 @@ const NavbarBelt = () => {
           <div className="navbarBeltOrderBottom">& Orders</div>
         </div>
         <Link to={'/cart'} className="cart">
-          <span className="cartNO">0</span>
+          <span className="cartNO">{cartItems.length}</span>
           <div className="cartlogo">
             <ShoppingCartIcon />
             <span className="cartTitle">Cart</span>
