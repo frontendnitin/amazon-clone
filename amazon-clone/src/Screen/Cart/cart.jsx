@@ -3,59 +3,58 @@ import "./cart.css";
 import { MdOutlineDone } from "react-icons/md";
 import { useSelector, useDispatch } from "react-redux";
 import { removeFromCart } from "../../redux/actions/actions";
-import { toast,ToastContainer } from "react-toastify/unstyled";
-import 'react-toastify/dist/ReactToastify.css'
+import { toast, ToastContainer } from "react-toastify/unstyled";
+import "react-toastify/dist/ReactToastify.css";
+import { clearCart } from "../../redux/actions/actions";
 
 const Cart = () => {
-  const [cartItem, setCartItem] = useState([]);
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.items);
 
-  let a=0
-  let cost = cartItems.map((item)=>{
-    return(
-      a=a+item.newprice
-    )
-  })
+  const cost = cartItems.reduce(
+    (total, item) => (total = total + item.newprice),
+    0,
+  );
 
-  useEffect(() => {
-    setCartItem(cartItems);
-  }, [cartItems]);
+  const handleRemoveFromCart = (id) => {
+    toast.error("Item Removed From Cart", {
+      position: "bottom-right",
+    });
+    dispatch(removeFromCart(id));
+  };
 
-  const handleRemoveFromCart=(id)=>{
-    toast.error("Item Removed From Cart",{
-      position:"bottom-right"
-    })
-    dispatch(removeFromCart(id)); 
-  }
-
+  const handleEmptyCart = () => {
+    dispatch(clearCart());
+  };
 
   return (
     <div className="Cart">
       <div className="topLeftCart">
         <div className="topLeftCartTitle">Shopping Cart</div>
-        <div className="deselectItems">Deselect all Items</div>
+        <div
+          className="deselectItems"
+          onClick={() => {
+            handleEmptyCart();
+          }}
+        >
+          Deselect all Items
+        </div>
         <div className="cartPriceTextDivider">Price</div>
 
         <div className="cartItemsDiv">
           {cartItems.map((item, id) => {
-            console.log(item) 
+            console.log(item);
             return (
-              <div className="cartItemBlock">
+              <div className="cartItemBlock" key={id}>
                 <div className="cartItemLeftBlock">
                   <div className="productCheackbox">
                     <input type="checkbox" className="cartProductCheck" />
                   </div>
                   <div className="cartItemLeftBlockImage">
-                    <img
-                      src={item.imageUrl}
-                      className="cartItemLeftBlockImg"
-                    />
+                    <img src={item.imageUrl} className="cartItemLeftBlockImg" />
                   </div>
                   <div className="cartItemLeftBlockDetails">
-                    <div className="cartItemProductName">
-                      {item.name}
-                    </div>
+                    <div className="cartItemProductName">{item.name}</div>
                     <div className="inStock">In Stock</div>
                     <span className="primeBadge">
                       <MdOutlineDone className="primeIcon" />
@@ -72,7 +71,14 @@ const Cart = () => {
                         <span className="learnMoreText">Learn more</span>
                       </div>
                     </div>
-                    <div className="removeFromCart" onClick={()=>{handleRemoveFromCart(item.id)}} >Remove </div>
+                    <div
+                      className="removeFromCart"
+                      onClick={() => {
+                        handleRemoveFromCart(item.id);
+                      }}
+                    >
+                      Remove
+                    </div>
                   </div>
                 </div>
 
@@ -91,7 +97,7 @@ const Cart = () => {
       <div className="topRightCart">
         <div className="subTotalTitle">
           Subtotal ({cartItems.length} items) :{" "}
-          <span className="subTotalTitleSpan">₹{a}</span>
+          <span className="subTotalTitleSpan">₹{cost}</span>
         </div>
         <div className="giftAddto">
           <input type="checkbox" className="cartProductCheck" />
@@ -99,7 +105,7 @@ const Cart = () => {
         </div>
         <div className="proceedToBuy">Proceed to Buy</div>
       </div>
-      <ToastContainer/>
+      <ToastContainer />
     </div>
   );
 };

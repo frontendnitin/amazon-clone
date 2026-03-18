@@ -124,7 +124,7 @@
 .rightNavBelt {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 1px;
   font-size: 12px;
 }
 
@@ -188,8 +188,8 @@
   }
 .cartNO {
   position: absolute;
-  top: -2px;
-  left: 17px;
+  top: -3px;
+  left: 15px;
   font-size: 12px;
   font-weight: bold;
   color: #f08804;
@@ -215,7 +215,7 @@
 .userAccount,
 .navbarBeltOrder,
 .cart {
-  padding: 10px;
+  padding: 7px;
   border: 1px solid transparent;
   border-radius: 2px;
   transition: border 0.2s ease;
