@@ -11,7 +11,7 @@ import { useSelector,useDispatch } from "react-redux";
 
 const NavbarBelt = () => {
 
-  const cartItems = useSelector((state)=>state.cart.items)
+  const cartItems = useSelector((state)=>state.items|| [])
   
 
   return (

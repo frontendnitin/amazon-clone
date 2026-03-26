@@ -9,7 +9,7 @@ import { clearCart } from "../../redux/actions/actions";
 
 const Cart = () => {
   const dispatch = useDispatch();
-  const cartItems = useSelector((state) => state.cart.items);
+  const cartItems = useSelector((state)=>state.items|| [])
 
   const cost = cartItems.reduce(
     (total, item) => (total = total + item.newprice),
@@ -40,12 +40,12 @@ const Cart = () => {
           Deselect all Items
         </div>
         <div className="cartPriceTextDivider">Price</div>
-
+          
         <div className="cartItemsDiv">
-          {cartItems.map((item, id) => {
+          {cartItems.map((item) => {
             console.log(item);
             return (
-              <div className="cartItemBlock" key={id}>
+              <div className="cartItemBlock" key={item.id}>
                 <div className="cartItemLeftBlock">
                   <div className="productCheackbox">
                     <input type="checkbox" className="cartProductCheck" />
@@ -82,7 +82,7 @@ const Cart = () => {
                   </div>
                 </div>
 
-                <div className="cartItemRightBlock">
+               <div className="cartItemRightBlock">
                   <div className="cartProductPrice">
                     <span className="currency">₹</span>
                     <span className="amount">{item.newprice}</span>

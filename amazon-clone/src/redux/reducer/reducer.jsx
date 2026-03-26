@@ -1,8 +1,8 @@
 import {
   ADD_TO_CART,
   CLEAR_CART,
-  UPDATE_CART_QUANTITY,
   REMOVE_FROM_CART,
+  UPDATE_CART_QUANTITY,
 } from "../actionsType";
 
 const initialState = {
@@ -27,7 +27,7 @@ const cartReducer = (state = initialState, action) => {
         items: state.items.map((item) =>
           item.id === action.payload.itemId
             ? { ...item, quantity: action.payload.quantity }
-            : item,
+            : item
         ),
       };
     case CLEAR_CART:
