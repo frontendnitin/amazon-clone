@@ -27,7 +27,7 @@ const saveState = (state) => {
     const cartItems = JSON.stringify(state);
     localStorage.setItem("cart", cartItems);  
   } catch (err) {
-    console.log("Could not save c art");
+    console.log("Could not save cart");
   }
 };
 

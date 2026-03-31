@@ -5,7 +5,7 @@ import indiaFlag from "../../assets/india.png"
 import { Link } from "react-router-dom";
 const Footer = () => {
   const backToTopHandler = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0});
   };
 
   return (

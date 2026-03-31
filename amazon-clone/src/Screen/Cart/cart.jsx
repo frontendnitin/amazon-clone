@@ -1,20 +1,39 @@
 import React, { useState, useEffect } from "react";
 import "./cart.css";
 import { MdOutlineDone } from "react-icons/md";
+import { FiTrash2 } from "react-icons/fi";
 import { useSelector, useDispatch } from "react-redux";
-import { removeFromCart } from "../../redux/actions/actions";
+import {
+  removeFromCart,
+  updateCartQuantity,
+} from "../../redux/actions/actions";
 import { toast, ToastContainer } from "react-toastify/unstyled";
 import "react-toastify/dist/ReactToastify.css";
 import { clearCart } from "../../redux/actions/actions";
 
 const Cart = () => {
   const dispatch = useDispatch();
-  const cartItems = useSelector((state)=>state.items|| [])
-
-  const cost = cartItems.reduce(
-    (total, item) => (total = total + item.newprice),
+  const cartItems = useSelector((state) => state.items || []);
+  const totalItems = cartItems.reduce(
+    (total, item) => total + item.quantity,
     0,
   );
+  const cost = cartItems.reduce(
+    (total, item) => (total = total + item.newprice * item.quantity),
+    0,
+  );
+
+  const increaseQuantity = (item) => {
+    dispatch(updateCartQuantity(item.id, item.quantity + 1));
+  };
+
+  const dicreaseQuantity = (item) => {
+    if (item.quantity > 1) {
+      dispatch(updateCartQuantity(item.id, item.quantity - 1));
+    } else {
+      dispatch(removeFromCart(item.id));
+    }
+  };
 
   const handleRemoveFromCart = (id) => {
     toast.error("Item Removed From Cart", {
@@ -40,7 +59,7 @@ const Cart = () => {
           Deselect all Items
         </div>
         <div className="cartPriceTextDivider">Price</div>
-          
+
         <div className="cartItemsDiv">
           {cartItems.map((item) => {
             console.log(item);
@@ -71,21 +90,51 @@ const Cart = () => {
                         <span className="learnMoreText">Learn more</span>
                       </div>
                     </div>
-                    <div
-                      className="removeFromCart"
-                      onClick={() => {
-                        handleRemoveFromCart(item.id);
-                      }}
-                    >
-                      Remove
+                    <div className="cartItemActions">
+                      <div className="quantityBox">
+                        {item.quantity === 1 ? (
+                          <button
+                            className="qtyBtn"
+                            onClick={() => handleRemoveFromCart(item.id)}
+                          >
+                            <FiTrash2 />
+                          </button>
+                        ) : (
+                          <button
+                            className="qtyBtn"
+                            onClick={() => dicreaseQuantity(item)}
+                          >
+                            -
+                          </button>
+                        )}
+                        <span className="qtyValue">{item.quantity}</span>
+                        <button
+                          className="qtyBtn"
+                          onClick={() => increaseQuantity(item)}
+                        >
+                          +
+                        </button>
+                      </div>
+                      <div className="cartItemsActionstOptions">
+                        <span onClick={() => handleRemoveFromCart(item.id)}>
+                          Delete
+                        </span>
+                        <span>|</span>
+                        <span>Save for later</span>
+                        <span>|</span>
+                        <span>See more like this</span>
+                        <span>|</span>
+                        <span>Share</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-
-               <div className="cartItemRightBlock">
+                <div className="cartItemRightBlock">
                   <div className="cartProductPrice">
                     <span className="currency">₹</span>
-                    <span className="amount">{item.newprice}</span>
+                    <span className="amount">
+                      {item.newprice.toLocaleString("en-IN")}
+                    </span>
                     <span className="fraction">00</span>
                   </div>
                 </div>
@@ -96,8 +145,10 @@ const Cart = () => {
       </div>
       <div className="topRightCart">
         <div className="subTotalTitle">
-          Subtotal ({cartItems.length} items) :{" "}
-          <span className="subTotalTitleSpan">₹{cost}</span>
+          Subtotal ({totalItems} items) :{" "}
+          <span className="subTotalTitleSpan">
+            ₹{cost.toLocaleString("en-IN")}
+          </span>
         </div>
         <div className="giftAddto">
           <input type="checkbox" className="cartProductCheck" />

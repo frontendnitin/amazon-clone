@@ -4,18 +4,21 @@ import productData from "./productsData";
 import RatingStars from "../../Component/RatingStars/RatingStars";
 import { addToCart } from "../../redux/actions/actions";
 import { useDispatch } from "react-redux";
-import { toast,ToastContainer } from "react-toastify/unstyled";
-import 'react-toastify/dist/ReactToastify.css'
+import { toast, ToastContainer } from "react-toastify/unstyled";
+import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
+
 const Products = () => {
   const dispatch = useDispatch();
-  
-  const handleAddToCart =(item)=>{
-    console.log(item)
-    toast.success ("Added in Cart",{
-      position:"bottom-right"
-    })
-    dispatch(addToCart(item))
-  }
+  const navigate = useNavigate();
+
+  const handleAddToCart = (item) => {
+    console.log(item);
+    toast.success("Added in Cart", {
+      position: "bottom-right",
+    });
+    dispatch(addToCart(item));
+  };
 
   return (
     <div className="productPage">
@@ -142,7 +145,11 @@ const Products = () => {
 
           <div className="itemsImageProductPage">
             {productData.product.map((item) => (
-              <div className="itemsImageProductPageOne" key={item.id}>
+              <div
+                className="itemsImageProductPageOne"
+                key={item.id}
+                onClick={() => navigate(`/product/${item.id}`)}
+              >
                 <div className="imgBlockitemsImageProductPageOne">
                   <img
                     src={item.imageUrl}
@@ -158,21 +165,30 @@ const Products = () => {
                   <span className="itemProductcurrency">₹</span>
                   <span className="itemProductnewPrice">{item.newprice}</span>
                   <span className="oldPrice">M.R.P: ₹{item.oldprice}</span>
-                  <button className="AddtoCartText" onClick={()=>{handleAddToCart(item)}}>Add to Cart</button>
+                  <button
+                    className="AddtoCartText"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleAddToCart(item);
+                    }}
+                  >
+                    Add to Cart
+                  </button>
                 </div>
-                <div className="offProductPage">Upto 10% off on select cards</div>
-                <div className="freeDeliveryProduct">Free Delivery on select cards</div>
-
+                <div className="offProductPage">
+                  Upto 10% off on select cards
+                </div>
+                <div className="freeDeliveryProduct">
+                  Free Delivery on select cards
+                </div>
               </div>
             ))}
           </div>
         </div>
       </div>
-      <ToastContainer/>
+      <ToastContainer />
     </div>
   );
 };
 
 export default Products;
-
-

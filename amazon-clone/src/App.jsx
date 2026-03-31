@@ -6,13 +6,15 @@ import Footer from "./Component/Footer/Footer"
 import {Routes,Route} from 'react-router-dom';
 import Cart from "./Screen/Cart/cart";
 import Products from "./Screen/Products/products"; 
+import ProductDetails from "./Screen/Products/ProductDetails";
 const App = () => {
   return (
     <div className="App">
       <Navbar />
       <Routes>
         <Route path="/" element={<HomeScreen/>} />
-        <Route path="/products" element={<Products/>} />
+        <Route path="/products" element={<Products/>} />  
+        <Route path="/product/:id" element={<ProductDetails/>}/>
         <Route path="/cart" element={<Cart/>} />
       </Routes>
       <Footer/>

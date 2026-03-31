@@ -12,7 +12,7 @@ import { useSelector,useDispatch } from "react-redux";
 const NavbarBelt = () => {
 
   const cartItems = useSelector((state)=>state.items|| [])
-  
+  const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <div className="navbarBelt">
@@ -87,7 +87,7 @@ const NavbarBelt = () => {
           <div className="navbarBeltOrderBottom">& Orders</div>
         </div>
         <Link to={'/cart'} className="cart">
-          <span className="cartNO">{cartItems.length}</span>
+          <span className="cartNO">{totalItems}</span>
           <div className="cartlogo">
             <ShoppingCartIcon />
             <span className="cartTitle">Cart</span>
