@@ -1,7 +1,8 @@
 import React from "react";
 import sponsoredData from "./sponsoredProductData";
 import "./sponsoredSection.css";
-import { FaCheckCircle } from "react-icons/fa";
+// import { FaCheckCircle } from "react-icons/fa";
+import { MdDone } from "react-icons/md";
 import { MdInfo } from "react-icons/md";
 
 import RatingStars from "../../../Component/RatingStars/RatingStars";
@@ -19,7 +20,7 @@ const SponsoredSection = () => {
             <div className="sponsoredRating">
               <RatingStars
                 rating={product.rating}
-                count={product.ratingCount}
+                count={product.globalrating}
               />
             </div>
             <div className="priceRow">
@@ -31,7 +32,7 @@ const SponsoredSection = () => {
               <span className="oldPrice">₹{product.oldPrice}</span>
               {product.isPrime && (
                 <span className="primeBadge">
-                  <FaCheckCircle className="primeIcon" />
+                  <MdDone className="primeIcon" />
                   <span className="primeText">prime</span>
                 </span>
               )}

@@ -163,8 +163,8 @@ const Products = () => {
                 </div>
                 <div className="productCartPrice">
                   <span className="itemProductcurrency">₹</span>
-                  <span className="itemProductnewPrice">{item.newprice}</span>
-                  <span className="oldPrice">M.R.P: ₹{item.oldprice}</span>
+                  <span className="itemProductnewPrice">{item.newprice.toLocaleString("en-IN")}</span>
+                  <span className="oldPrice">M.R.P: ₹{item.oldprice.toLocaleString("en-IN")}</span>
                   <button
                     className="AddtoCartText"
                     onClick={(e) => {

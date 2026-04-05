@@ -1,0 +1,147 @@
+.productInfoPage {
+  /* padding: 20px; */
+  flex: 2;
+}
+
+.product-title {
+  font-weight: 500;
+  font-size: 24px;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  color: #0f1111;
+  line-height: 1.3;
+  letter-spacing: 0.2px;
+}
+
+.visit-product {
+  font-size: 14px;
+  color: #2162a1;
+  cursor: pointer;
+  &:hover {
+    color: #0f1111;
+    text-decoration: underline;
+  }
+}
+.productInfo {
+  align-items: center;
+  display: flex;
+  /* gap: 10px; */
+}
+
+.productInfoPage .productRating svg {
+  /* width: 14px; */
+  height: 11px;
+}
+.productRating {
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+  margin-top: 3px;
+}
+
+.ratingNo {
+  font-size: 12px;
+}
+
+.border-margin {
+  color: #666;
+  margin: 0 10px;
+}
+
+.pageSearch {
+  font-size: 13px;
+  color: #2162a1;
+  white-space: nowrap;
+  cursor: pointer;
+  &:hover {
+    color: #0f1111;
+    text-decoration: underline;
+  }
+}
+
+hr {
+  margin: 10px 0;
+}
+
+.centerDesc {
+  margin-top: 15px;
+}
+
+.priceDetails {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px 5px 0px;
+  /* margin-top: 30px; */
+}
+
+.productNewPrice {
+  display: flex;
+  align-items: flex-start;
+}
+
+.itemProductcurrency {
+  font-size: 12px;
+}
+
+.itemProductnewPrice {
+  font-size: 28px;
+}
+
+.oldPrice {
+  font-size: 12px;
+}
+
+.texesText {
+  font-size: 14px;
+}
+
+.productOfferDeals {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  gap: 8px;
+  margin: 15px 0 5px 0;
+}
+
+.offerHeading {
+  display: flex;
+  gap: 15px;
+}
+
+.offerIcon {
+  color: #ffce12;
+  font-size: 15px;
+}
+
+.offerText {
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  font-weight: 600;
+}
+
+.offerDetails {
+  padding-left: 20px;
+  
+}
+
+.offerList {
+  
+  font-weight: 500;
+  line-height: 1.5;
+  
+}
+
+.offerListText{
+  font-size: 15px;
+}
+
+.detailsText {
+  padding-left: 10px;
+  font-size: 11px;
+  color: #2162a1;
+  &:hover {
+    cursor: pointer;
+    color: #0f1111;
+    text-decoration: underline;
+  }
+}

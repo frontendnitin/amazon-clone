@@ -1,0 +1,31 @@
+.productImages{
+    display:flex;
+    gap:2px;
+}
+
+.smallImages{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+
+.smallImages img{
+    width:45px;
+    height:45px;
+    object-fit:contain;
+    border:1px solid #ddd;
+    border-radius: 11px;
+    padding:2px;
+    cursor:pointer;
+    background:white;
+}
+
+.smallImages img:hover{
+    border:1px solid #ff9900;
+}
+
+.bigImage img{
+    width:450px;
+    height:450px;
+    object-fit:contain;
+}

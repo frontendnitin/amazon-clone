@@ -1,0 +1,23 @@
+
+.productDetailsPage {
+  display: flex;
+  padding: 10px;
+  align-items: flex-start;
+  background-color: #FFFFFF;
+}
+
+.productImages {
+  flex: 1;
+  max-width: 34%;
+}
+
+.productInfo {
+  flex: 1.5;
+  max-width: 40%;
+}
+
+.buyBox {
+  flex: 1;
+  max-width: 25%;
+} 
+
