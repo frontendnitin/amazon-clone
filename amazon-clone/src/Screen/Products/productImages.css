@@ -21,7 +21,7 @@
 }
 
 .smallImages img:hover{
-    border:1px solid #ff9900;
+    border:1px solid #2162a1;
 }
 
 .bigImage img{
@@ -29,3 +29,4 @@
     height:450px;
     object-fit:contain;
 }
+

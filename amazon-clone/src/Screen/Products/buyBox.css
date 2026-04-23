@@ -1,0 +1,180 @@
+.buyBoxContainer {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.buyBoxPrice {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.currency {
+  font-size: 14px;
+}
+
+.primeSection {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.primeIcon {
+  font-weight: bold;
+  color: #ffa41c;
+}
+
+.primeText {
+  font-weight: 600;
+}
+
+.taxText {
+  font-size: 13px;
+}
+
+.deliverySection {
+  font-size: 14px;
+}
+
+.deliverAddress {
+  color: #2162a1;
+  cursor: pointer;
+}
+
+.stockText {
+  font-size: 16px;
+  color: #007600;
+  font-weight: 500;
+}
+
+.sellerInfo {
+  font-size: 14px;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.infoLabel {
+  color: #565959;
+}
+
+.infoValue {
+  color: #2162a1;
+}
+
+.infoValue:hover {
+  cursor: pointer;
+}
+
+.sellerName:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* .quantityBox{
+  width: 200px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  padding:8px 12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  cursor:pointer;
+  background:#f0f2f2;
+}
+
+.quantityDropdown{
+  border:1px solid #ccc;
+  border-radius:8px;
+  overflow:hidden;
+}
+
+.quantityOption{
+  padding:8px 12px;
+  cursor:pointer;
+}
+
+.quantityOption:hover{
+  background:#f7ca00;
+} */
+
+.quantityWrapper {
+  position: relative;
+  /* parent for absolute dropdown */
+}
+
+/* main box */
+.quantityBox {
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  background: #f0f2f2;
+}
+
+/* dropdown */
+.quantityDropdown {
+  position: absolute;
+  top: 100%;
+  /* below the box */
+  left: 0;
+  width: 200px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  max-height: 180px;
+  /* fixed height like Amazon */
+  overflow-y: auto;
+  /* scroll */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  /* appears above buttons */
+}
+
+/* options */
+.quantityOption {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.quantityOption:hover {
+  background: #f7ca00;
+}
+
+.buyButtons {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.addCartBtn {
+  width: 200px;
+  font-weight: 500;
+  font-size: 14px;
+  background: #ffd814;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.buyNowBtn {
+  width: 200px;
+  font-weight: 500;
+  background: #ffa41c;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}

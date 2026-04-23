@@ -21,9 +21,10 @@
     text-decoration: underline;
   }
 }
-.productInfo {
-  align-items: center;
+
+.productRatingRow {
   display: flex;
+  align-items: center;
   /* gap: 10px; */
 }
 
@@ -97,8 +98,6 @@ hr {
 .productOfferDeals {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
   gap: 8px;
   margin: 15px 0 5px 0;
 }
@@ -121,22 +120,19 @@ hr {
 
 .offerDetails {
   padding-left: 20px;
-  
 }
 
 .offerList {
-  
   font-weight: 500;
   line-height: 1.5;
-  
 }
 
-.offerListText{
+.offerListText {
   font-size: 15px;
 }
 
 .detailsText {
-  padding-left: 10px;
+  padding-left: 20px;
   font-size: 11px;
   color: #2162a1;
   &:hover {
@@ -144,4 +140,72 @@ hr {
     color: #0f1111;
     text-decoration: underline;
   }
+}
+
+.serviceSection {
+  margin: 20px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  /* border-bottom: 1px solid #e7e7e7; */
+  /* padding-bottom: 20px; */
+  /* gap: 10px; */
+}
+
+.serviceDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.serviceIcons {
+  padding: 5px;
+  height: 25px;
+  width: 25px;
+  color: #ffce12;
+}
+
+.service-Text {
+  margin-top: 8px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  font-size: 12px;
+  color: #2162a1;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  text-align: center;
+}
+
+.service-Text:hover {
+  cursor: pointer;
+  color: #0f1111;
+}
+
+.bottomDesc {
+  margin-top: 5px;
+}
+
+.aboutProduct {
+  padding-top: 15px;
+}
+
+.aboutTitle {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #0f1111;
+}
+
+.aboutList {
+  padding-left: 18px;
+}
+
+.aboutItem {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #0f1111;
+  margin-bottom: 8px;
 }

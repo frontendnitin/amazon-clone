@@ -1,23 +1,33 @@
-
 .productDetailsPage {
+  /* align-items: flex-start; */
   display: flex;
   padding: 10px;
-  align-items: flex-start;
-  background-color: #FFFFFF;
+  /* height: 100%; */
+  height: calc(100vh - 100px);
+  background-color: #ffffff;
+  overflow: hidden;
 }
 
 .productImages {
   flex: 1;
   max-width: 34%;
+  height: fit-content;
 }
 
 .productInfo {
   flex: 1.5;
   max-width: 40%;
+  overflow-y: auto;
+  height: 100%;
+  padding-right: 10px;
+  scrollbar-width: none;
+}
+.productInfo::-webkit-scrollbar {
+  display: none;
 }
 
 .buyBox {
   flex: 1;
   max-width: 25%;
-} 
-
+  height: fit-content;
+}
