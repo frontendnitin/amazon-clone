@@ -7,10 +7,12 @@ import {Routes,Route} from 'react-router-dom';
 import Cart from "./Screen/Cart/cart";
 import Products from "./Screen/Products/products"; 
 import ProductDetails from "./Screen/Products/ProductDetails";
+import ScrollToTop from "./ScrollToTop";
 const App = () => {
   return (
     <div className="App">
       <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomeScreen/>} />
         <Route path="/products" element={<Products/>} />  

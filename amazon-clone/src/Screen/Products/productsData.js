@@ -10,8 +10,7 @@ const productsData = {
       globalrating: 12843,
       ratingcount: 4,
       rating: 4,
-      quantity: 1,
-      seller: "Clicktech Retail Private Ltd",
+      // quantity: 1,
       smallimageUrl: [
         "https://m.media-amazon.com/images/I/71wT57gW0hL._SY450_.jpg",
         "https://m.media-amazon.com/images/I/61WFCYG1eVL.jpg",

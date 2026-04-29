@@ -5,15 +5,16 @@ import {
   ADD_TO_CART,
 } from "../actionsType"
 
-export const addToCart = (item) => ({
+export const addToCart = (item,quantity=1 ) => ({
   type: ADD_TO_CART,
-  payload: item,
+  payload: {...item,quantity}
 });
 
 export const removeFromCart = (itemId) => ({
   type: REMOVE_FROM_CART,
   payload: itemId,
 });
+
 export const updateCartQuantity = (itemId, quantity) => ({
   type: UPDATE_CART_QUANTITY,
   payload: { itemId, quantity },

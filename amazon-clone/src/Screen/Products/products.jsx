@@ -1,6 +1,7 @@
 import React from "react";
 import "./products.css";
-import productData from "./productsData";
+// import productData from "./productsData";
+import { useEffect, useState } from "react";
 import RatingStars from "../../Component/RatingStars/RatingStars";
 import { addToCart } from "../../redux/actions/actions";
 import { useDispatch } from "react-redux";
@@ -9,6 +10,22 @@ import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 
 const Products = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const res = await fetch("/data/products.json");
+        const data = await res.json();
+        console.log(data);
+        setProducts(data.product);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchProducts();
+  }, []);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -18,6 +35,9 @@ const Products = () => {
       position: "bottom-right",
     });
     dispatch(addToCart(item));
+    setTimeout(() => {
+      navigate("/cart");
+    }, 200);
   };
 
   return (
@@ -144,7 +164,7 @@ const Products = () => {
           </div>
 
           <div className="itemsImageProductPage">
-            {productData.product.map((item) => (
+            {products.map((item) => (
               <div
                 className="itemsImageProductPageOne"
                 key={item.id}
@@ -163,8 +183,12 @@ const Products = () => {
                 </div>
                 <div className="productCartPrice">
                   <span className="itemProductcurrency">₹</span>
-                  <span className="itemProductnewPrice">{item.newprice.toLocaleString("en-IN")}</span>
-                  <span className="oldPrice">M.R.P: ₹{item.oldprice.toLocaleString("en-IN")}</span>
+                  <span className="itemProductnewPrice">
+                    {item.newprice.toLocaleString("en-IN")}
+                  </span>
+                  <span className="oldPrice">
+                    M.R.P: ₹{item.oldprice.toLocaleString("en-IN")}
+                  </span>
                   <button
                     className="AddtoCartText"
                     onClick={(e) => {

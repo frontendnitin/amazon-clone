@@ -10,8 +10,10 @@ import {
 import { toast, ToastContainer } from "react-toastify/unstyled";
 import "react-toastify/dist/ReactToastify.css";
 import { clearCart } from "../../redux/actions/actions";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.items || []);
   const totalItems = cartItems.reduce(
@@ -70,7 +72,11 @@ const Cart = () => {
                     <input type="checkbox" className="cartProductCheck" />
                   </div>
                   <div className="cartItemLeftBlockImage">
-                    <img src={item.imageUrl} className="cartItemLeftBlockImg" />
+                    <img
+                      src={item.imageUrl}
+                      className="cartItemLeftBlockImg"
+                      onClick={() => navigate(`/product/${item.id}`)}
+                    />
                   </div>
                   <div className="cartItemLeftBlockDetails">
                     <div className="cartItemProductName">{item.name}</div>
@@ -136,6 +142,10 @@ const Cart = () => {
                       {item.newprice.toLocaleString("en-IN")}
                     </span>
                     <span className="fraction">00</span>
+                  </div>
+                  <div className="cardOffer">
+                    Up to 5% back with Amazon Pay ICICI card{" "}
+                    <span className="terms">Terms</span>
                   </div>
                 </div>
               </div>

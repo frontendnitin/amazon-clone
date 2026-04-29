@@ -47,7 +47,6 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* position: relative; */
 }
 
 .cartItemBlock {
@@ -79,6 +78,7 @@
 }
 
 .cartItemLeftBlockImg {
+  cursor: pointer;
   width: 100%;
 }
 
@@ -168,16 +168,35 @@
 }
 
 .cartItemRightBlock {
-  font-size: 17px;
-  font-weight: 600;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .cartProductPrice {
   display: inline-flex;
-  align-items: flex-start;
+  font-size: 17px;
   font-weight: 600;
+  align-items: flex-start;
   color: #0f1111;
+}
+
+.cardOffer {
+  font-size: 12px;
+  max-width: 170px;
+  line-height: 1.7;
+  color: #565959;
+  margin-top: 5px;
+  text-align:right;
+}
+
+.terms {
+  color: #2162a1;
+  cursor: pointer;
+}
+
+.terms:hover {
+  text-decoration: underline;
 }
 
 .topRightCart {
@@ -194,7 +213,6 @@
 .subTotalTitle {
   font-size: 18px;
   font-weight: 500;
-  /* padding: 10px; */
 }
 
 .subTotalTitleSpan {
@@ -224,15 +242,14 @@
   cursor: pointer;
 }
 
-
-.cartItemActions{
+.cartItemActions {
   display: flex;
   margin-top: 10px;
   gap: 16px;
   align-items: center;
 }
 
-.quantityBox{
+.quantityBox {
   display: flex;
   align-items: center;
   border: 3px solid #ffce12;
@@ -241,8 +258,7 @@
   height: 32px;
 }
 
-
-.qtyBtn{
+.qtyBtn {
   width: 25px;
   height: 100%;
   border: none;
@@ -253,20 +269,20 @@
   transition: background 0.2s ease;
 }
 
-.qtyBtn:hover{
+.qtyBtn:hover {
   background: #e3e6e6;
 }
 
-.qtyBtn:active{
+.qtyBtn:active {
   transform: scale(0.95);
 }
 
-.qtyBtn svg{
+.qtyBtn svg {
   font-size: 14px;
   color: #0f1111;
 }
 
-.qtyValue{
+.qtyValue {
   width: 40px;
   text-align: center;
   font-size: 14px;
@@ -276,19 +292,19 @@
   background: white;
 }
 
-.cartItemsActionstOptions{
-  margin-top:8px;
-  font-size:13px;
-  color:#007185;
-  display:flex;
-  gap:8px;
-  align-items:center;
+.cartItemsActionstOptions {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #007185;
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }
 
-.cartItemsActionstOptions span{
-  cursor:pointer;
+.cartItemsActionstOptions span {
+  cursor: pointer;
 }
 
-.cartItemsActionstOptions span:hover{
-  text-decoration:underline;
+.cartItemsActionstOptions span:hover {
+  text-decoration: underline;
 }

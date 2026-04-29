@@ -1,11 +1,24 @@
 import React, { useState } from "react";
 import "./buyBox.css";
 import { MdDone } from "react-icons/md";
+import { addToCart } from "../../redux/actions/actions";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
 const BuyBox = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
   const [open, setOpen] = useState(false);
 
-  // const quantities = [1, 2, 3, 4, 5];
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const handleAddToCart = () => {
+    console.log(product)
+    dispatch(addToCart(product, quantity))
+    setTimeout(() => {
+      navigate("/cart");
+    }, 200);
+  }
+
 
   return (
     <div className="buyBoxContainer">
@@ -55,38 +68,8 @@ const BuyBox = ({ product }) => {
         </div>
       </div>
 
-      {/* <div className="quantityBox" onClick={() => setOpen(!open)}>
-
-        <span>Quantity: {quantity}</span>
-        <span className="dropdownArrow">▼</span>
-
-      </div>
-
-      {open && (
-
-        <div className="quantityDropdown">
-
-          {quantities.map((q) => (
-            <div
-              key={q}
-              className="quantityOption"
-              onClick={() => {
-
-                setQuantity(q)
-                setOpen(false)
-
-              }}
-            >
-              {q}
-            </div>
-          ))}
-
-        </div>
-
-      )} */}
-
       <div className="quantityWrapper">
-        <div className="quantityBox" onClick={() => setOpen(!open)}>
+        <div className="quantityContainer" onClick={() => setOpen(!open)}>
           <span>Quantity: {quantity}</span>
           <span>▼</span>
         </div>
@@ -111,7 +94,7 @@ const BuyBox = ({ product }) => {
 
       {/* Buttons */}
       <div className="buyButtons">
-        <button className="addCartBtn">Add to Cart</button>
+        <button className="addCartBtn" onClick={handleAddToCart}>Add to Cart</button>
         <button className="buyNowBtn">Buy Now</button>
       </div>
     </div>
