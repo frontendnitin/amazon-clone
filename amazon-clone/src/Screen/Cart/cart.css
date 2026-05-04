@@ -34,6 +34,7 @@
   color: #007185;
   margin-top: 8px;
   cursor: pointer;
+  max-width: 120px;
 }
 
 .cartPriceTextDivider {
