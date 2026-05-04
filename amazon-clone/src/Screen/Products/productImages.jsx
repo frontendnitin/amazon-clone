@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "./ProductImages.css";
+import "./productImages.css";
 
 const ProductImages = ({ product }) => {
     const [mainImage, setMainImage] = useState(product.imageUrl);
