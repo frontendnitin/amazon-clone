@@ -39,7 +39,7 @@ const ProductImages = ({ product }) => {
             width: lensSize + "px",
             height: lensSize + "px",
         });
-
+        
         const zoomLevel = 2.5;
 
         setZoomStyle({
