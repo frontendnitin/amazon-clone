@@ -7,17 +7,10 @@ A React-based Amazon-inspired e-commerce UI with a functional cart system and pr
 
 ## 📸 Screenshots
 
-### Home Page
-[Home Page](screenshots/homePage.png)
-
-### Product Listing
-[Product Page](screenshots/productPage.png)
-
-### Product Detail
-[Product Details](screenshots/productDetails.png)
-
-### Cart
-[Cart](screenshots/cart.png)
+[Home Page](amazon-clone/screenshots/homePage.png)
+[Product Page](amazon-clone/screenshots/productPage.png)
+[Product Details](amazon-clone/screenshots/productDetails.png)
+[Cart](amazon-clone/screenshots/cart.png)
 
 ## ✨ Features
 
