@@ -1,6 +1,5 @@
 import React from "react";
 import "./products.css";
-// import productData from "./productsData";
 import { useEffect, useState } from "react";
 import RatingStars from "../../Component/RatingStars/RatingStars";
 import { addToCart } from "../../redux/actions/actions";
