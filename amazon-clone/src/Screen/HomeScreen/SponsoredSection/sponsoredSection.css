@@ -145,3 +145,118 @@
   color: #565959;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .sponsoredSection {
+    margin: 15px 10px;
+  }
+
+  .sponsoredCard {
+    gap: 30px;
+    padding: 15px;
+  }
+
+  .sponsoredImg {
+    flex: 0 0 180px;
+  }
+
+  .sponsoredImg img {
+    max-height: 180px;
+  }
+
+  .sponsoredTitle {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .newPrice .amount {
+    font-size: 20px;
+  }
+
+  .oldPrice {
+    font-size: 13px;
+  }
+
+  .priceRow {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .shopBtn {
+    width: fit-content;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sponsoredSection {
+    margin: 10px 8px;
+  }
+
+  .sponsoredWrapper {
+    width: 100%;
+  }
+
+  .sponsoredCard {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 12px;
+  }
+
+  .sponsoredImg {
+    flex: unset;
+    width: 100%;
+  }
+
+  .sponsoredImg img {
+    width: 100%;
+    max-width: 220px;
+    max-height: 200px;
+    object-fit: contain;
+  }
+
+  .sponsoredDetails {
+    width: 100%;
+    padding-right: 0;
+    text-align: left;
+    gap: 6px;
+  }
+
+  .sponsoredTitle {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .sponsoredRating {
+    font-size: 13px;
+  }
+
+  .priceRow {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .newPrice .amount {
+    font-size: 20px;
+  }
+
+  .oldPrice {
+    font-size: 13px;
+  }
+
+  .primeBadge {
+    font-size: 13px;
+  }
+
+  .shopBtn {
+    width: 100%;
+    height: 34px;
+    font-size: 14px;
+  }
+
+  .sponsoredText {
+    bottom: -18px;
+    font-size: 11px;
+  }
+}

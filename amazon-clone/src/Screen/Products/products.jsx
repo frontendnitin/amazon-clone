@@ -10,13 +10,13 @@ import { useNavigate } from "react-router-dom";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         const res = await fetch("/data/products.json");
         const data = await res.json();
-        console.log(data);
         setProducts(data.product);
       } catch (err) {
         console.log(err);
@@ -25,140 +25,166 @@ const Products = () => {
     fetchProducts();
   }, []);
 
+
+  useEffect(() => {
+    if (isFilterOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isFilterOpen]);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleAddToCart = (item) => {
-    console.log(item);
-    toast.success("Added in Cart", {
-      position: "bottom-right",
-    });
+    toast.success("Added in Cart", { position: "bottom-right" });
     dispatch(addToCart(item));
     setTimeout(() => {
       navigate("/cart");
     }, 200);
   };
 
-  return (
-    <div className="productPage">
-      <div className="productTopBanner">
-        <div className="productTopBannerItems">Electronics</div>
-        <div className="productTopBannerItemsSubMenu">
-          Mobiles & Accessories
+  // Reusable sidebar content — used in both desktop sidebar & mobile drawer
+  const SidebarContent = () => (
+    <>
+      <div className="productsPageMainCategoryTitle">Category</div>
+      <div className="productsPageMainLeftCategoryContent">
+        <div className="productsPageMainLeftCategoryTitleContent">
+          Electronics
         </div>
-        <div className="productTopBannerItemsSubMenu">
-          Laptops & Accessories
-        </div>
-        <div className="productTopBannerItemsSubMenu">
-          TV & Home Entertainment
-        </div>
-        <div className="productTopBannerItemsSubMenu">Audio</div>
-        <div className="productTopBannerItemsSubMenu">Cameras</div>
-        <div className="productTopBannerItemsSubMenu">Computer Peripherals</div>
-        <div className="productTopBannerItemsSubMenu">Smart Technology</div>
-        <div className="productTopBannerItemsSubMenu">Musical Instruments</div>
-        <div className="productTopBannerItemsSubMenu">Office & Stationary</div>
+        {[
+          "Macbooks", 
+          "Amazon Prime",
+          "Portable Media Players",
+          "Home Audio",
+          "Video",
+          "Mobiles & Accessories",
+          "Tablets",
+          "Warranties",
+          "eBook Readers & Accessories",
+          "Wearable Technology",
+          "General Purpose Batteries & Battery Chargers",
+          "Headphones, Earbuds & Accessories",
+          "Power Accessories",
+          "Accessories",
+          "Cameras & Photography",
+          "Car & Vehicle Electronics",
+          "Computers & Accessories",
+          "GPS & Accessories",
+          "Home Audio",
+          "Home Theater, TV & Video",
+        ].map((sub, index) => (
+          <div className="productsPageMainLeftCategoryContentSub" key={`${sub}-${index}`}>
+            {sub}
+          </div>
+        ))}
       </div>
 
+      <div className="ratingSection">
+        <div className="ratingTitle">Customer Review</div>
+        <RatingStars rating={4} showUp />
+        <RatingStars rating={3} showUp />
+        <RatingStars rating={2} showUp />
+        <RatingStars rating={1} showUp />
+      </div>
+
+      <div className="filterSection">
+        <div className="filterTitle">Price</div>
+        {[
+          "Under ₹1,000",
+          "₹1,000 - ₹5,000",
+          "₹5,000 - ₹10,000",
+          "Over ₹10,000",
+        ].map((label) => (
+          <label className="checkboxItem" key={label}>
+            <input type="checkbox" /> {label}
+          </label>
+        ))}
+      </div>
+    </>
+  );
+
+  return (
+    <div className="productPage">
+      {/* ── Top Category Banner ── */}
+      <div className="productTopBanner">
+        <div className="productTopBannerItems">Electronics</div>
+        {[
+          "Mobiles & Accessories",
+          "Laptops & Accessories",
+          "TV & Home Entertainment",
+          "Audio",
+          "Cameras",
+          "Computer Peripherals",
+          "Smart Technology",
+          "Musical Instruments",
+          "Office & Stationary",
+        ].map((label) => (
+          <div className="productTopBannerItemsSubMenu" key={label}>
+            {label}
+          </div>
+        ))}
+      </div>
+
+      {/* ── Mobile: Sticky Filter / Sort Bar ── */}
+      <div className="mobileFilterBar">
+        <button
+          className="mobileFilterBtn"
+          onClick={() => setIsFilterOpen(true)}
+        >
+          <span className="mobileFilterIcon">&#9776;</span> Filter
+        </button>
+        <div className="mobileFilterDivider" />
+        <button className="mobileFilterBtn">
+          <span className="mobileFilterIcon">&#8645;</span> Sort
+        </button>
+      </div>
+
+      {/* ── Mobile: Filter Drawer Overlay ── */}
+      {isFilterOpen && (
+        <div
+          className="filterOverlay"
+          onClick={() => setIsFilterOpen(false)}
+        />
+      )}
+      <div className={`filterDrawer ${isFilterOpen ? "filterDrawerOpen" : ""}`}>
+        <div className="filterDrawerHeader">
+          <span className="filterDrawerTitle">Filter</span>
+          <button
+            className="filterDrawerClose"
+            onClick={() => setIsFilterOpen(false)}
+          >
+            ✕
+          </button>
+        </div>
+        <div className="filterDrawerBody">
+          <SidebarContent />
+        </div>
+        <div className="filterDrawerFooter">
+          <button
+            className="filterApplyBtn"
+            onClick={() => setIsFilterOpen(false)}
+          >
+            Apply Filters
+          </button>
+        </div>
+      </div>
+
+      {/* ── Main Content ── */}
       <div className="productsPageMain">
+        {/* Desktop Sidebar */}
         <div className="productsPageMainLeftCategory">
-          <div className="productsPageMainCategoryTitle">Category</div>
-          <div className="productsPageMainLeftCategoryContent">
-            <div className="productsPageMainLeftCategoryTitleContent">
-              Electronics
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              Macbooks
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              Amazon Prime
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              Portable Media Players
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              Home Audio
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">video</div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              Mobiles & Accessories
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              Tablets
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              Warrenties
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              eBook Readers & Accessories
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              Wearable Technology
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              General Purpose Batteries & Battery Chargers
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              Headphones, Earbuds & Accessories
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              Power Accessories
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              Accessories
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              Cameras & Photography
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              Car & Vehicle Electronics
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              Computers & Accessories
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              GPS & Accessories
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              Home Audio
-            </div>
-            <div className="productsPageMainLeftCategoryContentSub">
-              Home Theater, TV & Video
-            </div>
-          </div>
-
-          <div className="ratingSection">
-            <div className="ratingTitle">Customer review</div>
-            <RatingStars rating={4} showUp />
-            <RatingStars rating={3} showUp />
-            <RatingStars rating={2} showUp />
-            <RatingStars rating={1} showUp />
-          </div>
-
-          <div className="filterSection">
-            <div className="filterTitle">Price</div>
-
-            <label className="checkboxItem">
-              <input type="checkbox" /> Under ₹1,000
-            </label>
-
-            <label className="checkboxItem">
-              <input type="checkbox" /> ₹1,000 - ₹5,000
-            </label>
-
-            <label className="checkboxItem">
-              <input type="checkbox" /> ₹5,000 - ₹10,000
-            </label>
-
-            <label className="checkboxItem">
-              <input type="checkbox" /> Over ₹10,000
-            </label>
-          </div>
+          <SidebarContent />
         </div>
 
+        {/* Product Grid */}
         <div className="productsPageMainRight">
           <div className="productsPageMainRightTopBanner">
-            1-5 of results for{" "}
+            1-{products.length} of results for{" "}
             <span className="productsPageMainRightTopBannerSpan">Macbooks</span>
           </div>
 
@@ -181,10 +207,12 @@ const Products = () => {
                   <RatingStars rating={item.rating} />
                 </div>
                 <div className="productCartPrice">
-                  <span className="itemProductcurrency">₹</span>
-                  <span className="itemProductnewPrice">
-                    {item.newprice.toLocaleString("en-IN")}
-                  </span>
+                  <div className="priceWrapper">
+                    <span className="itemProductcurrency">₹</span>
+                    <span className="itemProductnewPrice">
+                      {item.newprice.toLocaleString("en-IN")}
+                    </span>
+                  </div>
                   <span className="oldPrice">
                     M.R.P: ₹{item.oldprice.toLocaleString("en-IN")}
                   </span>
@@ -209,6 +237,7 @@ const Products = () => {
           </div>
         </div>
       </div>
+
       <ToastContainer />
     </div>
   );

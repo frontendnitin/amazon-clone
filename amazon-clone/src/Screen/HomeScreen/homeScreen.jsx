@@ -1,20 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./homeScreen.css";
 import HomeBanner from "./HomeBanner/homeBanner";
-// import HomeDetails from "./HomeDetails/homeDetails";
 import FeatureSection from "./FeatureSection/featureSection";
 import VideoScrollSection from "./VideoScrollSection/videoScrollSection";
 import HorizontalProductScroll from "../../Component/HorizontalProductScroll/HorizontalProductScroll";
-import data from "../../Component/HorizontalProductScroll/horizontalScrollData";
 import HomeGridProductSection from "../../Component/HomeGridProductSection/HomeGridProductSection";
 import homeGridProductData from "../../Component/HomeGridProductSection/HomeGridProductData";
 import SponsoredSection from "./SponsoredSection/sponsoredSection";
 
 const HomeScreen = () => {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch("/data/horizontalScrollData.json");
+        const json = await res.json();
+        setData(json);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchData();
+  }, []);
+
+   if (!data) return <div>Loading...</div>;
+
   return (
     <div className="HomeScreen">
       <HomeBanner />
-      {/* <HomeDetails /> */}
       <HorizontalProductScroll
         title={data.HomeDetails1.title}
         products={data.HomeDetails1.products}
@@ -32,12 +46,12 @@ const HomeScreen = () => {
         products={data.firstDeals.products}
         seeMoreText={data.firstDeals.seeMoreText}
       />
-      <SponsoredSection/>
+      <SponsoredSection />
       <HomeGridProductSection cards={homeGridProductData} />
-      <HorizontalProductScroll  
+      <HorizontalProductScroll
         title={data.bikesDeals.title}
         products={data.bikesDeals.products}
-        seeMoreText={data.bikesDeals.seeMoreText} 
+        seeMoreText={data.bikesDeals.seeMoreText}
         variant="bike"
       />
       {/* <Footer/> */}

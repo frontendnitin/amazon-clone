@@ -77,33 +77,6 @@
   cursor: pointer;
 }
 
-/* .quantityBox{
-  width: 200px;
-  border:1px solid #ccc;
-  border-radius:8px;
-  padding:8px 12px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  cursor:pointer;
-  background:#f0f2f2;
-}
-
-.quantityDropdown{
-  border:1px solid #ccc;
-  border-radius:8px;
-  overflow:hidden;
-}
-
-.quantityOption{
-  padding:8px 12px;
-  cursor:pointer;
-}
-
-.quantityOption:hover{
-  background:#f7ca00;
-} */
-
 .quantityWrapper {
   position: relative;
   /* parent for absolute dropdown */
@@ -176,4 +149,18 @@
   padding: 10px;
   border-radius: 20px;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .quantityContainer,
+  .quantityDropdown,
+  .addCartBtn,
+  .buyNowBtn {
+    width: 100%;
+  }
+
+  .buyBoxContainer {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }

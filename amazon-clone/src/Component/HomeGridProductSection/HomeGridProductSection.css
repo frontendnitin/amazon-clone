@@ -1,4 +1,4 @@
-* {
+/* * {
   font-family: "Amazon Ember", Arial, sans-serif;
 }
 .homeGridRow {
@@ -14,7 +14,7 @@
   display: flex;
   background-color: white;
   flex-direction: column;
-  /* box-sizing: border-box; */
+
   padding: 20px 0 15px;
   height: 450px;
 }
@@ -24,7 +24,7 @@
   font-size: 21px;
   font-weight: 600;
   line-height: 1.2;
-  /* min-height: 35px;   */
+
   display: -webkit-box;
   -webkit-box-orient: vertical;
   line-clamp: 2;
@@ -40,7 +40,7 @@
   grid-template-columns: repeat(2, 1fr);
   padding: 0px 12px;
   flex-grow: 1;
-  /* align-items: center; */
+
   align-items: stretch;
 }
 
@@ -120,4 +120,253 @@
   padding: 20px 20px 0px 20px;
   color: #007185;
   cursor: pointer;
+} */
+
+* {
+  font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+.homeGridRow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.homeGridCard {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  padding: 20px 0 15px;
+  height: 450px;
+  min-width: 0;
+}
+
+.homeGridTitle {
+  padding: 0px 20px;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.2;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+  color: #0f1111;
+}
+
+.homeGridItems {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0px 12px;
+  flex-grow: 1;
+  align-items: stretch;
+}
+
+.homeGridItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 6px 0px;
+  gap: 4px;
+}
+
+.imgWrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.homeGridItem:hover {
+  cursor: pointer;
+}
+
+.homeGridItem img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+}
+
+.homeGridItem.noText img {
+  height: 150px;
+}
+
+.homeGridItem.withText img {
+  height: 110px;
+}
+
+.itemName {
+  font-size: 13px;
+  font-weight: 500;
+  color: #0f1111;
+  line-height: 1.2;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+
+  overflow: hidden;
+  text-align: left;
+  padding: 0px 3px;
+  text-overflow: ellipsis;
+}
+
+.price {
+  display: inline-flex;
+  align-items: flex-start;
+  font-weight: 500;
+  color: #0f1111;
+}
+
+.currency {
+  font-size: 12px;
+  margin-right: 2px;
+}
+
+.amount {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.fraction {
+  font-size: 12px;
+  margin-left: 1px;
+}
+
+.seemore-text {
+  margin-top: auto;
+  font-size: 14px;
+  padding: 20px 20px 0px 20px;
+  color: #007185;
+  cursor: pointer;
+}
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+  .homeGridRow {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 14px;
+
+    padding: 10px 12px;
+
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+  }
+
+  .homeGridRow::-webkit-scrollbar {
+    display: none;
+  }
+
+  .homeGridCard {
+    flex: 0 0 300px;
+    height: 385px;
+  }
+
+  .homeGridTitle {
+    font-size: 18px;
+  }
+
+  .homeGridItem.noText img {
+    height: 115px;
+  }
+
+  .homeGridItem.withText img {
+    height: 90px;
+  }
+
+  .itemName {
+    font-size: 12px;
+    line-height: 1.1;
+  }
+
+  .amount {
+    font-size: 17px;
+  }
+
+  .seemore-text {
+    padding-top: 12px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .homeGridRow {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    gap: 12px;
+    padding: 8px 10px;
+
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+  }
+
+  .homeGridRow::-webkit-scrollbar {
+    display: none;
+  }
+
+  .homeGridCard {
+    flex: 0 0 260px;
+    height: 350px;
+    padding: 14px 0 10px;
+  }
+
+  .homeGridTitle {
+    font-size: 16px;
+    padding: 0px 14px;
+  }
+
+  .homeGridItems {
+    padding: 0px 8px;
+  }
+
+  .homeGridItem {
+    gap: 2px;
+  }
+
+  .homeGridItem.noText img {
+    height: 95px;
+  }
+
+  .homeGridItem.withText img {
+    height: 78px;
+  }
+
+  .itemName {
+    font-size: 10px;
+    line-height: 1.1;
+  }
+
+  .amount {
+    font-size: 16px;
+  }
+
+  .currency,
+  .fraction {
+    font-size: 10px;
+  }
+
+  .seemore-text {
+    font-size: 12px;
+    padding: 10px 14px 0px 14px;
+  }
 }

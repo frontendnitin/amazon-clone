@@ -1,7 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import "./productDetails.css";
-
 import ProductImages from "./productImages";
 import ProductInfo from "./productInfo";
 import BuyBox from "./buyBox";

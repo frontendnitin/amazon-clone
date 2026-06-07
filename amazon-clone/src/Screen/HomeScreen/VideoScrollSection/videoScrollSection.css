@@ -144,3 +144,142 @@
   color: #565959;
   text-decoration: line-through;
 }
+
+@media (max-width: 768px) {
+  .videoScrollMain {
+    margin: 0px 10px 15px 10px;
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .videoScrollTitle {
+    font-size: 16px;
+  }
+
+  .videoscollSeeMore {
+    font-size: 12px;
+  }
+
+  .videoScrollContent {
+    gap: 8px;
+    padding: 8px;
+  }
+
+  /* Video smaller but stays on left */
+  .videoContainer {
+    flex: 0 0 40%;
+  }
+
+  .hoverVideo {
+    height: 180px;
+  }
+
+  .productCard {
+    width: 110px;
+    padding: 4px 6px 20px 6px;
+  }
+
+  .scrollImg {
+    height: 100px;
+  }
+
+  .productdetails {
+    font-size: 11px;
+  }
+
+  .offer {
+    flex-direction: column;
+    gap: 2px;
+    padding: 2px 4px;
+  }
+
+  .deal {
+    font-size: 9px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .discount {
+    font-size: 9px;
+    padding: 1px 4px;
+  }
+
+  .newPrice {
+    font-size: 13px;
+  }
+
+  .oldPrice {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .videoScrollMain {
+    margin: 0px 8px 12px 8px;
+    padding: 8px;
+    gap: 15px;
+  }
+
+  .videoScrollHeading {
+    flex-direction: column;
+    gap: 4px;
+    padding: 0px 8px;
+  }
+
+  .videoScrollTitle {
+    font-size: 14px;
+  }
+
+  .videoscollSeeMore {
+    font-size: 11px;
+  }
+
+  /* Video even smaller on very small screens */
+  .videoContainer {
+    flex: 0 0 38%;
+  }
+
+  .hoverVideo {
+    height: 150px;
+  }
+
+  .productCard {
+    width: 90px;
+    padding: 4px 5px 15px 5px;
+  }
+
+  .scrollImg {
+    height: 80px;
+  }
+
+  .productdetails {
+    font-size: 10px;
+  }
+
+  .newPrice {
+    font-size: 12px;
+  }
+
+  .oldPrice {
+    font-size: 10px;
+  }
+
+  .offer {
+    flex-direction: column;
+    gap: 1px;
+    padding: 1px 4px;
+  }
+
+  .deal {
+    font-size: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .discount {
+    font-size: 8px;
+    padding: 1px 3px;
+  }
+}

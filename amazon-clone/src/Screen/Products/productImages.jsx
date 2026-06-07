@@ -50,7 +50,7 @@ const ProductImages = ({ product }) => {
     };
 
     return (
-        <div className="productImages">
+        <div className="productImagesContainer">
             {/* Small Images */}
             <div className="smallImages">
                 {images.map((img, index) => (

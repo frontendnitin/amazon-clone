@@ -96,3 +96,53 @@
   max-height: 100%;
   max-width: 100%;
 }
+
+@media (max-width: 768px) {
+  .horizontal-section {
+    margin: 10px;
+    padding: 0 5px;
+  }
+
+  .section-heading {
+    padding: 8px 0px 4px 6px;
+  }
+
+  .section-heading .section-title {
+    font-size: 1.1rem;
+  }
+
+  .section-heading .see-more {
+    font-size: 0.8rem;
+  }
+
+  .product-card {
+    width: 120px;
+    height: 160px;
+  }
+
+  .bike .product-card {
+    width: 200px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .horizontal-section {
+    margin: 8px;
+    padding: 0 4px;
+  }
+
+  .section-heading .section-title {
+    font-size: 1rem;
+  }
+
+  .product-card {
+    width: 100px;
+    height: 140px;
+  }
+
+  .bike .product-card {
+    width: 170px;
+    height: 120px;
+  }
+}

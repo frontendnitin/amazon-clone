@@ -1,9 +1,30 @@
-import React, { useRef } from "react";
-import videoData from "./videoScrollData.json";
+import React, { useRef,useState } from "react";
+// import videoData from "./videoScrollData.json";
 import "./videoScrollSection.css";
 import ScrollRow from "../../../Component/Scroll/ScrollRow"; // adjust path if needed
+import { useEffect } from "react";
+
 
 const VideoScrollSection = () => {
+
+  const [videoData,setVideoData] = useState(null);
+
+  useEffect(()=>{
+    const fetchData = async()=>{
+      try{
+        const res = await fetch("/data/videoScrollData.json")
+        const data = await res.json()
+        setVideoData(data)
+      }
+      catch(err){
+        console.log(err)
+      }
+    }
+     fetchData();
+  },[])
+
+   if (!videoData) return <div>Loading...</div>;
+
   return (
     <div className="videoScrollMain">
       {videoData.map((item, index) => (

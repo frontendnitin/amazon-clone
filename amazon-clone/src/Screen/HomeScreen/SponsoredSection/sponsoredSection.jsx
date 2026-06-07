@@ -1,13 +1,31 @@
-import React from "react";
-import sponsoredData from "./sponsoredProductData";
+import React, { useState } from "react";
+// import sponsoredData from "./sponsoredProductData";
 import "./sponsoredSection.css";
-// import { FaCheckCircle } from "react-icons/fa";
 import { MdDone } from "react-icons/md";
 import { MdInfo } from "react-icons/md";
 
 import RatingStars from "../../../Component/RatingStars/RatingStars";
+import { useEffect } from "react";
 const SponsoredSection = () => {
-  const { product } = sponsoredData;
+
+  const [data, setData] = useState(null)
+
+  useEffect(() => {
+    const fetchData =async()=>{
+      try {
+        const res = await fetch("/data/sponsoredData.json")
+        const json = await res.json()
+        setData(json)
+      } catch (err) {
+        console.log(err)
+      }
+    } 
+    fetchData()
+  },[])
+
+  if (!data) return <div>Loading...</div>
+
+  const { product } = data;
   return (
     <div className="sponsoredSection">
       <div className="sponsoredWrapper">
@@ -40,7 +58,7 @@ const SponsoredSection = () => {
             <button className="shopBtn">Shop now</button>
           </div>
         </div>
-        <div className="sponsoredText">Sponsored <MdInfo className="i-logo"/></div>
+        <div className="sponsoredText">Sponsored <MdInfo className="i-logo" /></div>
       </div>
     </div>
   );

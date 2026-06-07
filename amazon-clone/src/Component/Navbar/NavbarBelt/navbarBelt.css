@@ -230,3 +230,51 @@
 .cart:hover {
   border: 1px solid white;
 }
+
+
+@media (max-width: 768px) {
+  .navbarBelt {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 8px 10px;
+    gap: 6px;
+    min-height: 60px;
+  }
+
+  /* Row 1: Logo on left, Cart on right */
+  .leftNavBelt {
+    flex: 1;
+    order: 1;
+  }
+
+  /* Hide location on mobile */
+  .navBeltLocation {
+    display: none;
+  }
+
+  /* Search takes full width — Row 2 */
+  .navbarBeltSearchBox {
+    order: 3;
+    width: 100%;
+    padding: 0 0 6px 0;
+  }
+
+  .navbarBeltSearchDiv {
+    min-width: unset;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Hide these on mobile */
+  .countryLang,
+  .userAccount,
+  .navbarBeltOrder {
+    display: none;
+  }
+
+  /* Keep only cart — Row 1 right side */
+  .rightNavBelt {
+    order: 2;
+    flex: 0;
+  }
+}

@@ -1,26 +1,34 @@
-import React from 'react'
-import "./productInfo.css"
+import {React,useState} from "react";
+import "./productInfo.css";
 import { MdDone } from "react-icons/md";
-import RatingStars from "../../Component/RatingStars/RatingStars"
+import RatingStars from "../../Component/RatingStars/RatingStars";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPercent } from "@fortawesome/free-solid-svg-icons";
-import { faArrowRotateLeft, faTruckFast, faShieldHalved , faHandHoldingDollar,faTrophy, faLock } from '@fortawesome/free-solid-svg-icons';
+import {
+  faArrowRotateLeft,
+  faTruckFast,
+  faShieldHalved,
+  faHandHoldingDollar,
+  faTrophy,
+  faLock,
+} from "@fortawesome/free-solid-svg-icons";
 
 const iconMap = {
   replace: faArrowRotateLeft,
   Delivery: faTruckFast,
   secure: faShieldHalved,
-  dollar:faHandHoldingDollar ,
-  brand:faTrophy,
-  lock:faLock
+  dollar: faHandHoldingDollar,
+  brand: faTrophy,
+  lock: faLock,
 };
 
 const productInfo = ({ product }) => {
+  const [showAllAbout, setShowAllAbout] = useState(false);
   return (
     <div className="productInfoPage">
       <div className="topDesc">
-        <div className='product-title'>{product.name}</div>
-        <span className='visit-product'>Visit the Store</span>
+        <div className="product-title">{product.name}</div>
+        <span className="visit-product">Visit the Store</span>
         <div className="productRatingRow">
           <div className="productRating">
             <div className="ratingNo">{product.ratingcount}</div>
@@ -30,64 +38,87 @@ const productInfo = ({ product }) => {
             />
           </div>
           <div className="border-margin">|</div>
-          <span className='pageSearch'>Search this page</span>
+          <span className="pageSearch">Search this page</span>
         </div>
       </div>
       <hr />
       <div className="centerDesc">
-        <div className='priceDetails'>
+        <div className="priceDetails">
           <div className="productNewPrice">
             <span className="itemProductcurrency">₹</span>
-            <span className="itemProductnewPrice">{product.newprice.toLocaleString("en-IN")}</span>
+            <span className="itemProductnewPrice">
+              {product.newprice.toLocaleString("en-IN")}
+            </span>
           </div>
-          <span className="oldPrice">M.R.P: ₹{product.oldprice.toLocaleString("en-IN")}</span>
+          <span className="oldPrice">
+            M.R.P: ₹{product.oldprice.toLocaleString("en-IN")}
+          </span>
         </div>
         <span className="primeBadge">
-          <MdDone className="primeIcon"/>
+          <MdDone className="primeIcon" />
           <span className="primeText">prime</span>
         </span>
-        <span className='texesText'>Inclusive of all taxes</span>
+        <span className="texesText">Inclusive of all taxes</span>
         <div className="productOfferDeals">
           <div className="offerHeading">
             <FontAwesomeIcon icon={faPercent} className="offerIcon" />
-            <span className='offerText'>Offers</span>
+            <span className="offerText">Offers</span>
           </div>
           <ul className="offerDetails">
             {product.offer.map((offers, index) => (
               // <span className='offerList'> . {offers}</span>
-              <li className='offerList' key={index}>
-                <span className='offerListText'>{offers}</span>
-                <span className='detailsText'>Details</span>
+              <li className="offerList" key={index}>
+                <span className="offerListText">{offers}</span>
+                <span className="detailsText">Details</span>
               </li>
             ))}
           </ul>
         </div>
         <div className="serviceSection">
           {product.services.map((service, index) => (
-
             <div className="serviceDetails" key={index}>
-              <FontAwesomeIcon icon={iconMap[service.icon]} className="serviceIcons" />
-              <span className='service-Text'>{service.text}</span>
+              <FontAwesomeIcon
+                icon={iconMap[service.icon]}
+                className="serviceIcons"
+              />
+              <span className="service-Text">{service.text}</span>
             </div>
           ))}
         </div>
         <hr />
         <div className="bottomDesc">
-            <div className="aboutProduct">
-              <h3 className='aboutTitle'>About this item</h3>
-              <ul className='aboutList'>
+          <div className="aboutProduct">
+            <h3 className="aboutTitle">About this item</h3>
+            {/* <ul className='aboutList'>
                 {product.about.map((point,index)=>(
                   <li key={index} className='aboutItem'>
                     {point}
                   </li>
                 ))}
-              </ul>
-            </div>
+              </ul> */}
+            <ul className="aboutList">
+              {(showAllAbout ? product.about : product.about.slice(0, 3)).map(
+                (point, index) => (
+                  <li key={index} className="aboutItem">
+                    {point}
+                  </li>
+                ),
+              )}
+            </ul>
+
+            {product.about.length > 3 && (
+              <div
+                className="seeMoreAbout"
+                onClick={() => setShowAllAbout(!showAllAbout)}
+              >
+                {showAllAbout ? "See less" : "See more"}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default productInfo
-
+export default productInfo;

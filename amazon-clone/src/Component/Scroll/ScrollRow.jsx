@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./scrollRow.css";
-// import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-// import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+
 
 const ScrollRow = ({ children }) => {
   const scrollRef = useRef(null);
